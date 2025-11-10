@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./resources/css/stylemazenode.css">
+        <script src="resources/js/jquery-3.6.3.js"></script>
+        <script src="resources/js/imageMapResizer.min.js"></script>
+        <title>hello</title>
+    </head>
+    <body>
+        <section id="main">
+            <img src="resources/images/deadbridge.jpg" usemap="#linkmap">
+            <map name="#linkmap">
+
+            </map>
+        </section>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $('map').imageMapResize();
+        });
+    </script>
+</html>
