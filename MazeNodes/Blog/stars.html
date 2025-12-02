@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../../resources/css/styleblog.css">
+        <script src="../../resources/js/jquery-3.6.3.js"></script>
+        <script src="../../resources/js/sitemapgenerator.js"></script>
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <section class="main">
+            <header><p>stars</p></header>
+            <section class="content">
+                <section class="sidebar">
+                </section>
+                <section class="body" style="overflow-y: hidden; background-image: url(../../resources/images/NodeAssets/Blog/rainbowstarz.gif);">
+                    <div class="marquisedecat" style="background-image:url(../../resources/images/NodeAssets/Blog/rainbowstarz.gif)"></div>
+                    <iframe id="gamewindow" src="https://kadorath.github.io/Little%20Starlight%2002/" width="816" height="624" style="transform-origin: 0 0; border: none; border-top: ridge 4px black; border-bottom: ridge 4px black" title="Little Starlight"></iframe>
+                </section>
+            </section>
+        </section>
+    </body>
+    <script>
+        let $game = $("#gamewindow");
+        let $body = $("section.body");
+        window.addEventListener("resize", resize_gamewindow);
+        window.addEventListener("load", resize_gamewindow);
+
+        function resize_gamewindow() {
+            $game.css("transform", `scale(${$body.width() / $game.width()})`);
+        }
+    </script>
+</html>

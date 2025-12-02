@@ -1,0 +1,139 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../images/NodeAssets/Blog/rainbowstarz.gif");
+    background-repeat: repeat;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6vw;
+    justify-content: center;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display:none;
+}
+
+section.main {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    border: 1vw black ridge;
+    height: 600px;
+    width: 60%;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 8%;
+    background: rgb(132, 131, 131);
+    color: black;
+    border-bottom: 4px groove white;
+}
+
+section.content {
+    display: flex;
+    height: 90%;
+}
+
+section.sidebar {
+    background: rgb(29, 28, 28);
+    width: 25%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 2vw;
+}
+
+@keyframes marqueeslide {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 100%; }
+}
+
+div.marquisedecat {
+    width: 100%;
+    height: 47px;
+    background-image: url("../images/NodeAssets/Blog/dancingcat.gif");
+    background-repeat: repeat-x;
+    animation: marqueeslide 20s linear infinite;
+}
+
+section.body {
+    width: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+section.body img {
+    width: 100%;
+}
+
+section p {
+    margin: 8px;
+}
+
+textarea.textentry {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    background: #0f0f0f;
+    color: white;
+    border: 0.8vw solid #222;
+    padding: 1.2vw;
+    font-size: 1.8vw;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+    border-radius: 0.5vw;
+}
+
+textarea.textentry::placeholder {
+    color: #bfbfbf;
+}
+
+button {
+    float: right;
+    margin-right: 24px;
+}
+
+section > a {
+    margin: 8px;
+    text-decoration: none;
+    color:white;
+}
+
+p > a {
+    color: rgb(168, 168, 168);
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
+    text-decoration: line-through;
+}
+
+#graveholder > div {
+    position: relative;
+}
+
+#graveholder>div div {
+    display:none;
+    position: absolute;
+    top: -8vw;
+    left: -40px;
+    width: 120px;
+    font-size: 0.75em;
+    background: black;
+    border-radius: 4px;
+    box-shadow: black 0px 0px 6px;
+    text-align: center;
+}
+
+#graveholder>div:hover div {
+    display: block;
+}
