@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../../resources/css/styleblog.css">
+        <script src="../../resources/js/jquery-3.6.3.js"></script>
+        <script src="../../resources/js/sitemapgenerator.js"></script>
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <section class="main">
+            <header><p>ifonawintersnight</p></header>
+            <section class="content">
+                <section class="sidebar">
+                </section>
+                <section class="body">
+                    <textarea class="textentry" spellcheck="false" placeholder="If on a winter's night..."></textarea>
+                    <div style="width: 100%"><button type="submit" onclick="submit()">Send</button></div>
+                </section>
+            </section>
+        </section>
+    </body>
+    <script>
+        var $textentry = $(".textentry");
+        function submit() {
+            if ($textentry.val() == "") { return; }
+            $textentry.attr("placeholder", $textentry.val());
+            sessionStorage.setItem("iph", $textentry.val());
+            $textentry.val("");
+        }
+
+        window.addEventListener("load", function() {
+            if (sessionStorage.getItem("iph") == null) {
+                sessionStorage.setItem("iph", "If on a winter's night...");
+            }
+
+            $textentry.attr("placeholder", sessionStorage.getItem("iph"));
+        });
+    </script>
+</html>

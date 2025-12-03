@@ -6,9 +6,23 @@
         <link rel="stylesheet" href="../../resources/css/styleblog.css">
         <script src="../../resources/js/jquery-3.6.3.js"></script>
         <script src="../../resources/js/sitemapgenerator.js"></script>
+        <style>
+            div > a {
+                display: block;
+                width: 10vw;
+                height: 25vw;
+                margin: 1vw;
+                background-size:contain;
+                background-repeat: no-repeat;
+                background-image:url('../../resources/images/NodeAssets/Hallway/door_closed.png');
+            }
+            div > a:hover{
+                background-image:url('../../resources/images/NodeAssets/Hallway/door_opened.png');
+            }
+        </style>
         <title>Welcome!</title>
     </head>
-    <body>
+    <body style="overflow-x: scroll;">
         <section class="main">
             <header><p>weareseven</p></header>
             <section class="content">
@@ -121,5 +135,8 @@
                 </section>
             </section>
         </section>
+        <div style="position: absolute; left: 105vw; top: 76%;">
+                <a href="hallway.html"></a>
+        </div>
     </body>
 </html>
